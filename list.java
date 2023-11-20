@@ -1,6 +1,3 @@
-
-import java.util.Random;
-
 class Node {
 	public Node next;
 	public Node prev;
@@ -182,44 +179,5 @@ class List {
 		}
 	} //οταν η μεθοδος καλειται τοτε η λιστα που παιρνει ως ορισμα γινεται sorted με την μεθοδο της Insertion
 
-	public static void main(String[] args) {
-		    List list2 = new List();
-	        List list = new List();
-	        List fl = new List();
-	    	Random rand=new Random();
-
-	        // Insert elements into the list
-	       for (int i=0; i<=4; i++) {
-			int random = rand.nextInt(15);
-	    	   list.insertFirst(random);
-	       }
-	       
-	       //Insert elements into the list2
-	       for (int i=0; i<=4; i++) {
-				int random = rand.nextInt(15);
-		    	   list2.insertFirst(random);
-		       }
-	  
-	        // Print the contents of both lists
-	        System.out.println("list:");
-	        list.print();
-
-	        System.out.println("list2:");
-	        list2.print();
-	        
-	        System.out.println("Filtered list:");
-	        fl=list.filter(list2);
-	        fl.print();
-
-			System.out.println("Insertion Sorted list:");
-			insertionSort(list);
-			list.print();
-
-			System.out.println("The merged list one;");
-			list.mergeWith(list2).print();
-
-			System.out.println("The list with the bigger k elements is :");
-			list.print();
-			list.largest(5).print();
-			}
+	public static void main(String[] args) {			
 }
